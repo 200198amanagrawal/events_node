@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/200198amanagrawal/node_first_program/issues"
   },
-  "homepage": "https://github.com/200198amanagrawal/node_first_program#readme"
+  "homepage": "https://github.com/200198amanagrawal/node_first_program#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
