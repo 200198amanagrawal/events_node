@@ -1,7 +1,11 @@
 const http=require("http");
+const fs=require("fs");//creating the file and saving the data.
 const server=http.createServer(function(req,res)
 {
-    res.writeHead(200,{"content-type":"text/plain"});//even though we are writing html it will convert it to plain text
-    res.write("<h1>Node js tutorial running</h1>");
-    res.end();
+    fs.readFile(__dirname+"/hello.txt","utf-8",(err,data)=>{//remember one thing whenever we are writing the code of http req we have to put inside the fs..
+        res.writeHead(200,{"content-type":"text/plain"});
+        res.write(data);
+        res.end();
+        });
 }).listen(3000);
+
